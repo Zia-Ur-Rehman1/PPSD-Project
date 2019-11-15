@@ -146,31 +146,38 @@ int main()
      {
        std::cout << "Give the name u want to search:" << '\n';
        std::cin >> name;
-       obj.search(name,NULL,NULL,NULL,1);
+       obj.search(name,"","","",1);
      }
      else if(key==2)
      {
        std::cout << "Give the city u want to search:" << '\n';
        std::cin >> city;
-       obj.search(NULL,city,NULL,NULL,2);
+       obj.search("",city,"","",2);
      }
      else if(key==3)
      {
        std::cout << "Give the number u want to search:" << '\n';
        std::cin >> number;
-       obj.search(NULL,NULL,number,NULL,3);
+       obj.search("","",number,"",3);
      }
      else   if(key==4)
      {
        std::cout << "Give the number u want to search:" << '\n';
-       std::cin >> number;
-       obj.search(NULL,NULL,NULL,email,4);
-
+       std::cin >> email;
+       obj.search("","","",email,4);
      }
+     else
+     std::cout << "You have Given wrong input:" << '\n';
      break;
-
-
+     case 3:
+     obj.Display();
+     break;
+     default:
+     std::cout << "Given wrong input:" << '\n';
+     break;
    }
+   std::cout << "Press 0 to exit else Press any number:" << '\n';
+   std::cin >> condition;
  } while(condition!=0);
   return(0);
 }
