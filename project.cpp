@@ -132,7 +132,7 @@ public:
               number[k]=-1;
               email[k]=-1;
          cout<<"Data has been deleted!"<<endl;
-
+        Shifting(1);
               return;
             }
         }
@@ -217,6 +217,61 @@ public:
       }
       std::cout << "No data has been found:" << '\n';
     }
+ void Shifting(int key){
+    int index;
+    if(key == 1){
+
+         for(int k=0; k<=i; k++){
+
+            if(name[k]== -1){
+                name[k]=name[k+1];
+                cout<<"Data has been shifted!"<<endl;
+                break;
+            }
+
+
+         }
+    }
+         if(key==2){
+
+            for(int k=0; k<=i; k++){
+                if(city[k]==-1){
+                    city[k]=city[k+1];
+                    cout<<"Data has been shifted!"<<endl;
+                }
+
+            }
+         }
+        if(key==3){
+
+            for(int k=0 ; k<=i ; k++){
+                if(number[k]==-1){
+                    number[k]=number[k+1];
+                cout<<"Data has been shifted!"<<endl;
+                }
+
+            }
+        }
+        if(key==4){
+            for(int k=0 ; k<=i ; k++){
+
+                if(email[k]==-1){
+                    email[k]=email[k+1];
+                cout<<"Data has been shifted!"<<endl;
+                }
+            }
+
+
+        }
+        cout<<"No data To shift!"<<endl;
+
+         }
+
+
+
+
+
+
 
 };
 int main()
